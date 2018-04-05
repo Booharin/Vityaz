@@ -1,0 +1,665 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FD9C4DB2076B3B100FFDF54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD9C4DA2076B3B100FFDF54 /* AppDelegate.swift */; };
+		1FD9C4DD2076B3B100FFDF54 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD9C4DC2076B3B100FFDF54 /* MainViewController.swift */; };
+		1FD9C4E02076B3B100FFDF54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD9C4DE2076B3B100FFDF54 /* Main.storyboard */; };
+		1FD9C4E22076B3B100FFDF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FD9C4E12076B3B100FFDF54 /* Assets.xcassets */; };
+		1FD9C4E52076B3B100FFDF54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD9C4E32076B3B100FFDF54 /* LaunchScreen.storyboard */; };
+		1FD9C4F02076B3B100FFDF54 /* VityazGKBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD9C4EF2076B3B100FFDF54 /* VityazGKBTests.swift */; };
+		1FD9C4FB2076B3B100FFDF54 /* VityazGKBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD9C4FA2076B3B100FFDF54 /* VityazGKBUITests.swift */; };
+		1FD9C50F2076B51F00FFDF54 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD9C50E2076B51F00FFDF54 /* WebViewController.swift */; };
+		1FD9C5122076B67700FFDF54 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD9C5102076B67700FFDF54 /* WebView.storyboard */; };
+		1FD9C5152076B79200FFDF54 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD9C5142076B79200FFDF54 /* WebKit.framework */; };
+		1FD9C5172076B84B00FFDF54 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD9C5162076B84B00FFDF54 /* Auth.storyboard */; };
+		1FD9C5192076B86600FFDF54 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD9C5182076B86600FFDF54 /* AuthViewController.swift */; };
+		1FD9C51C2076B9AB00FFDF54 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD9C51A2076B9AB00FFDF54 /* Map.storyboard */; };
+		1FD9C51E2076B9D600FFDF54 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD9C51D2076B9D600FFDF54 /* MapViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1FD9C4EC2076B3B100FFDF54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FD9C4CF2076B3B100FFDF54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FD9C4D62076B3B100FFDF54;
+			remoteInfo = VityazGKB;
+		};
+		1FD9C4F72076B3B100FFDF54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FD9C4CF2076B3B100FFDF54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FD9C4D62076B3B100FFDF54;
+			remoteInfo = VityazGKB;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1FD9C4D72076B3B100FFDF54 /* VityazGKB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VityazGKB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FD9C4DA2076B3B100FFDF54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1FD9C4DC2076B3B100FFDF54 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1FD9C4DF2076B3B100FFDF54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1FD9C4E12076B3B100FFDF54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FD9C4E42076B3B100FFDF54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1FD9C4E62076B3B100FFDF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FD9C4EB2076B3B100FFDF54 /* VityazGKBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VityazGKBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FD9C4EF2076B3B100FFDF54 /* VityazGKBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VityazGKBTests.swift; sourceTree = "<group>"; };
+		1FD9C4F12076B3B100FFDF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FD9C4F62076B3B100FFDF54 /* VityazGKBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VityazGKBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FD9C4FA2076B3B100FFDF54 /* VityazGKBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VityazGKBUITests.swift; sourceTree = "<group>"; };
+		1FD9C4FC2076B3B100FFDF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FD9C50E2076B51F00FFDF54 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		1FD9C5112076B67700FFDF54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VityazGKB/Storyboards/Base.lproj/WebView.storyboard; sourceTree = "<group>"; };
+		1FD9C5142076B79200FFDF54 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		1FD9C5162076B84B00FFDF54 /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		1FD9C5182076B86600FFDF54 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		1FD9C51B2076B9AB00FFDF54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VityazGKB/Storyboards/Base.lproj/Map.storyboard; sourceTree = "<group>"; };
+		1FD9C51D2076B9D600FFDF54 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FD9C4D42076B3B100FFDF54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD9C5152076B79200FFDF54 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FD9C4E82076B3B100FFDF54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FD9C4F32076B3B100FFDF54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FD9C4CE2076B3B100FFDF54 = {
+			isa = PBXGroup;
+			children = (
+				1FD9C4D92076B3B100FFDF54 /* VityazGKB */,
+				1FD9C4EE2076B3B100FFDF54 /* VityazGKBTests */,
+				1FD9C4F92076B3B100FFDF54 /* VityazGKBUITests */,
+				1FD9C4D82076B3B100FFDF54 /* Products */,
+				1FD9C5132076B79200FFDF54 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1FD9C4D82076B3B100FFDF54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FD9C4D72076B3B100FFDF54 /* VityazGKB.app */,
+				1FD9C4EB2076B3B100FFDF54 /* VityazGKBTests.xctest */,
+				1FD9C4F62076B3B100FFDF54 /* VityazGKBUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FD9C4D92076B3B100FFDF54 /* VityazGKB */ = {
+			isa = PBXGroup;
+			children = (
+				1FD9C5082076B45500FFDF54 /* ViewControllers */,
+				1FD9C50A2076B48700FFDF54 /* Storyboards */,
+				1FD9C5092076B47700FFDF54 /* SupportFiles */,
+				1FD9C4E62076B3B100FFDF54 /* Info.plist */,
+			);
+			path = VityazGKB;
+			sourceTree = "<group>";
+		};
+		1FD9C4EE2076B3B100FFDF54 /* VityazGKBTests */ = {
+			isa = PBXGroup;
+			children = (
+				1FD9C4EF2076B3B100FFDF54 /* VityazGKBTests.swift */,
+				1FD9C4F12076B3B100FFDF54 /* Info.plist */,
+			);
+			path = VityazGKBTests;
+			sourceTree = "<group>";
+		};
+		1FD9C4F92076B3B100FFDF54 /* VityazGKBUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1FD9C4FA2076B3B100FFDF54 /* VityazGKBUITests.swift */,
+				1FD9C4FC2076B3B100FFDF54 /* Info.plist */,
+			);
+			path = VityazGKBUITests;
+			sourceTree = "<group>";
+		};
+		1FD9C5082076B45500FFDF54 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1FD9C4DC2076B3B100FFDF54 /* MainViewController.swift */,
+				1FD9C50E2076B51F00FFDF54 /* WebViewController.swift */,
+				1FD9C5182076B86600FFDF54 /* AuthViewController.swift */,
+				1FD9C51D2076B9D600FFDF54 /* MapViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1FD9C5092076B47700FFDF54 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1FD9C4DA2076B3B100FFDF54 /* AppDelegate.swift */,
+				1FD9C4E12076B3B100FFDF54 /* Assets.xcassets */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		1FD9C50A2076B48700FFDF54 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1FD9C4DE2076B3B100FFDF54 /* Main.storyboard */,
+				1FD9C5102076B67700FFDF54 /* WebView.storyboard */,
+				1FD9C5162076B84B00FFDF54 /* Auth.storyboard */,
+				1FD9C51A2076B9AB00FFDF54 /* Map.storyboard */,
+				1FD9C4E32076B3B100FFDF54 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1FD9C5132076B79200FFDF54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FD9C5142076B79200FFDF54 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FD9C4D62076B3B100FFDF54 /* VityazGKB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FD9C4FF2076B3B100FFDF54 /* Build configuration list for PBXNativeTarget "VityazGKB" */;
+			buildPhases = (
+				1FD9C4D32076B3B100FFDF54 /* Sources */,
+				1FD9C4D42076B3B100FFDF54 /* Frameworks */,
+				1FD9C4D52076B3B100FFDF54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VityazGKB;
+			productName = VityazGKB;
+			productReference = 1FD9C4D72076B3B100FFDF54 /* VityazGKB.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1FD9C4EA2076B3B100FFDF54 /* VityazGKBTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FD9C5022076B3B100FFDF54 /* Build configuration list for PBXNativeTarget "VityazGKBTests" */;
+			buildPhases = (
+				1FD9C4E72076B3B100FFDF54 /* Sources */,
+				1FD9C4E82076B3B100FFDF54 /* Frameworks */,
+				1FD9C4E92076B3B100FFDF54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FD9C4ED2076B3B100FFDF54 /* PBXTargetDependency */,
+			);
+			name = VityazGKBTests;
+			productName = VityazGKBTests;
+			productReference = 1FD9C4EB2076B3B100FFDF54 /* VityazGKBTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1FD9C4F52076B3B100FFDF54 /* VityazGKBUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FD9C5052076B3B100FFDF54 /* Build configuration list for PBXNativeTarget "VityazGKBUITests" */;
+			buildPhases = (
+				1FD9C4F22076B3B100FFDF54 /* Sources */,
+				1FD9C4F32076B3B100FFDF54 /* Frameworks */,
+				1FD9C4F42076B3B100FFDF54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FD9C4F82076B3B100FFDF54 /* PBXTargetDependency */,
+			);
+			name = VityazGKBUITests;
+			productName = VityazGKBUITests;
+			productReference = 1FD9C4F62076B3B100FFDF54 /* VityazGKBUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FD9C4CF2076B3B100FFDF54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Александр";
+				TargetAttributes = {
+					1FD9C4D62076B3B100FFDF54 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					1FD9C4EA2076B3B100FFDF54 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 1FD9C4D62076B3B100FFDF54;
+					};
+					1FD9C4F52076B3B100FFDF54 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 1FD9C4D62076B3B100FFDF54;
+					};
+				};
+			};
+			buildConfigurationList = 1FD9C4D22076B3B100FFDF54 /* Build configuration list for PBXProject "VityazGKB" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FD9C4CE2076B3B100FFDF54;
+			productRefGroup = 1FD9C4D82076B3B100FFDF54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FD9C4D62076B3B100FFDF54 /* VityazGKB */,
+				1FD9C4EA2076B3B100FFDF54 /* VityazGKBTests */,
+				1FD9C4F52076B3B100FFDF54 /* VityazGKBUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FD9C4D52076B3B100FFDF54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD9C4E52076B3B100FFDF54 /* LaunchScreen.storyboard in Resources */,
+				1FD9C4E22076B3B100FFDF54 /* Assets.xcassets in Resources */,
+				1FD9C5172076B84B00FFDF54 /* Auth.storyboard in Resources */,
+				1FD9C5122076B67700FFDF54 /* WebView.storyboard in Resources */,
+				1FD9C4E02076B3B100FFDF54 /* Main.storyboard in Resources */,
+				1FD9C51C2076B9AB00FFDF54 /* Map.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FD9C4E92076B3B100FFDF54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FD9C4F42076B3B100FFDF54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FD9C4D32076B3B100FFDF54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD9C5192076B86600FFDF54 /* AuthViewController.swift in Sources */,
+				1FD9C4DD2076B3B100FFDF54 /* MainViewController.swift in Sources */,
+				1FD9C50F2076B51F00FFDF54 /* WebViewController.swift in Sources */,
+				1FD9C51E2076B9D600FFDF54 /* MapViewController.swift in Sources */,
+				1FD9C4DB2076B3B100FFDF54 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FD9C4E72076B3B100FFDF54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD9C4F02076B3B100FFDF54 /* VityazGKBTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FD9C4F22076B3B100FFDF54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD9C4FB2076B3B100FFDF54 /* VityazGKBUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FD9C4ED2076B3B100FFDF54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FD9C4D62076B3B100FFDF54 /* VityazGKB */;
+			targetProxy = 1FD9C4EC2076B3B100FFDF54 /* PBXContainerItemProxy */;
+		};
+		1FD9C4F82076B3B100FFDF54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FD9C4D62076B3B100FFDF54 /* VityazGKB */;
+			targetProxy = 1FD9C4F72076B3B100FFDF54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1FD9C4DE2076B3B100FFDF54 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FD9C4DF2076B3B100FFDF54 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1FD9C4E32076B3B100FFDF54 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FD9C4E42076B3B100FFDF54 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1FD9C5102076B67700FFDF54 /* WebView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FD9C5112076B67700FFDF54 /* Base */,
+			);
+			name = WebView.storyboard;
+			sourceTree = "<group>";
+		};
+		1FD9C51A2076B9AB00FFDF54 /* Map.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FD9C51B2076B9AB00FFDF54 /* Base */,
+			);
+			name = Map.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FD9C4FD2076B3B100FFDF54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1FD9C4FE2076B3B100FFDF54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1FD9C5002076B3B100FFDF54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62UUS6482X;
+				INFOPLIST_FILE = VityazGKB/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Umbrella.VityazGKB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1FD9C5012076B3B100FFDF54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62UUS6482X;
+				INFOPLIST_FILE = VityazGKB/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Umbrella.VityazGKB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1FD9C5032076B3B100FFDF54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62UUS6482X;
+				INFOPLIST_FILE = VityazGKBTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Umbrella.VityazGKBTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VityazGKB.app/VityazGKB";
+			};
+			name = Debug;
+		};
+		1FD9C5042076B3B100FFDF54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62UUS6482X;
+				INFOPLIST_FILE = VityazGKBTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Umbrella.VityazGKBTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VityazGKB.app/VityazGKB";
+			};
+			name = Release;
+		};
+		1FD9C5062076B3B100FFDF54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62UUS6482X;
+				INFOPLIST_FILE = VityazGKBUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Umbrella.VityazGKBUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VityazGKB;
+			};
+			name = Debug;
+		};
+		1FD9C5072076B3B100FFDF54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62UUS6482X;
+				INFOPLIST_FILE = VityazGKBUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Umbrella.VityazGKBUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VityazGKB;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FD9C4D22076B3B100FFDF54 /* Build configuration list for PBXProject "VityazGKB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FD9C4FD2076B3B100FFDF54 /* Debug */,
+				1FD9C4FE2076B3B100FFDF54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FD9C4FF2076B3B100FFDF54 /* Build configuration list for PBXNativeTarget "VityazGKB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FD9C5002076B3B100FFDF54 /* Debug */,
+				1FD9C5012076B3B100FFDF54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FD9C5022076B3B100FFDF54 /* Build configuration list for PBXNativeTarget "VityazGKBTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FD9C5032076B3B100FFDF54 /* Debug */,
+				1FD9C5042076B3B100FFDF54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FD9C5052076B3B100FFDF54 /* Build configuration list for PBXNativeTarget "VityazGKBUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FD9C5062076B3B100FFDF54 /* Debug */,
+				1FD9C5072076B3B100FFDF54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FD9C4CF2076B3B100FFDF54 /* Project object */;
+}

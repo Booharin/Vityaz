@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="XaW-mX-LhD">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="Mab-c2-yWh" customClass="MapViewController" customModule="VityazGKB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RmW-U6-O7g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KuE-BS-gzM">
+                                <rect key="frame" x="0.0" y="20" width="375" height="394"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpL-FK-k3V">
+                                <rect key="frame" x="113" y="453" width="148" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="qPm-Bv-HMZ"/>
+                                    <constraint firstAttribute="height" constant="148" id="uSc-77-qa8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="getHelp:" destination="Mab-c2-yWh" eventType="touchUpInside" id="vJx-UC-rWq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJ6-cI-0l9">
+                                <rect key="frame" x="16" y="436" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Lv4-l9-f54"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xI3-6z-Pl2">
+                                <rect key="frame" x="16" y="36" width="12" height="24"/>
+                                <state key="normal" image="backbutton"/>
+                                <connections>
+                                    <action selector="backToAuth:" destination="Mab-c2-yWh" eventType="touchUpInside" id="kbr-MR-ybg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KuE-BS-gzM" firstAttribute="leading" secondItem="M4L-ZF-eV5" secondAttribute="leading" id="BRC-xf-qyG"/>
+                            <constraint firstItem="KuE-BS-gzM" firstAttribute="trailing" secondItem="M4L-ZF-eV5" secondAttribute="trailing" id="FDo-ry-SIa"/>
+                            <constraint firstItem="xI3-6z-Pl2" firstAttribute="top" secondItem="M4L-ZF-eV5" secondAttribute="top" constant="16" id="Hfq-La-B5q"/>
+                            <constraint firstItem="zpL-FK-k3V" firstAttribute="leading" secondItem="kJ6-cI-0l9" secondAttribute="trailing" constant="51" id="IX6-AT-ZJB"/>
+                            <constraint firstItem="M4L-ZF-eV5" firstAttribute="bottom" secondItem="kJ6-cI-0l9" secondAttribute="bottom" constant="185" id="K6X-Zz-w4r"/>
+                            <constraint firstItem="xI3-6z-Pl2" firstAttribute="leading" secondItem="M4L-ZF-eV5" secondAttribute="leading" constant="16" id="Mrl-UT-V2c"/>
+                            <constraint firstItem="kJ6-cI-0l9" firstAttribute="top" secondItem="KuE-BS-gzM" secondAttribute="bottom" constant="22" id="UUb-nm-ODZ"/>
+                            <constraint firstItem="M4L-ZF-eV5" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zpL-FK-k3V" secondAttribute="bottom" constant="66" id="fgi-mE-PcA"/>
+                            <constraint firstItem="kJ6-cI-0l9" firstAttribute="leading" secondItem="M4L-ZF-eV5" secondAttribute="leading" constant="16" id="ptW-VW-QEn"/>
+                            <constraint firstItem="KuE-BS-gzM" firstAttribute="top" secondItem="M4L-ZF-eV5" secondAttribute="top" id="t1H-5p-sVY"/>
+                            <constraint firstItem="zpL-FK-k3V" firstAttribute="top" secondItem="KuE-BS-gzM" secondAttribute="bottom" constant="39" id="tDO-5o-29h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M4L-ZF-eV5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gf-In-K6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516" y="368.36581709145429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backbutton" width="12" height="24"/>
+    </resources>
+</document>
