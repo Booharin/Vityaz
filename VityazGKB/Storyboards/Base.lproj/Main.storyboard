@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,28 +19,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cLP-SG-rsH">
-                                <rect key="frame" x="114" y="60" width="147" height="185"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoIconNew" translatesAutoresizingMaskIntoConstraints="NO" id="cLP-SG-rsH">
+                                <rect key="frame" x="86.5" y="60" width="202" height="287"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="147" id="EMu-Ss-Bmv"/>
-                                    <constraint firstAttribute="height" constant="185" id="J50-rR-Mu1"/>
+                                    <constraint firstAttribute="width" secondItem="cLP-SG-rsH" secondAttribute="height" multiplier="50:71" id="Qbl-tA-87S"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать в приложение ГКБ Витязь" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAe-SL-Mh7">
-                                <rect key="frame" x="49" y="316" width="277" height="41"/>
+                                <rect key="frame" x="20" y="397" width="335" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="Ygc-zn-YQN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNi-eH-fSo">
-                                <rect key="frame" x="50" y="465" width="275" height="30"/>
-                                <color key="backgroundColor" red="0.32769864797592163" green="0.45350247621536255" blue="0.69832915067672729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="50" y="488" width="275" height="50"/>
+                                <color key="backgroundColor" red="0.25882352941176467" green="0.27843137254901962" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="54E-nY-jSi"/>
+                                    <constraint firstAttribute="height" constant="50" id="54E-nY-jSi"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Стать клиентом">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -53,11 +54,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bB-NL-tGD">
-                                <rect key="frame" x="50" y="524" width="275" height="30"/>
-                                <color key="backgroundColor" red="0.32769864797592163" green="0.45350247621536255" blue="0.69832915067672729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="50" y="567" width="275" height="50"/>
+                                <color key="backgroundColor" red="0.25882352941176467" green="0.27843137254901962" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="PCc-bh-0Iq"/>
+                                    <constraint firstAttribute="height" constant="50" id="PCc-bh-0Iq"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Вход для клиентов">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -73,18 +75,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gpQ-Xq-t54" firstAttribute="trailing" secondItem="gAe-SL-Mh7" secondAttribute="trailing" constant="49" id="7o9-fg-hkQ"/>
+                            <constraint firstItem="cLP-SG-rsH" firstAttribute="centerX" secondItem="U7X-5u-eFT" secondAttribute="centerX" id="6dz-o6-8dZ"/>
+                            <constraint firstItem="gpQ-Xq-t54" firstAttribute="trailing" secondItem="gAe-SL-Mh7" secondAttribute="trailing" constant="20" id="7o9-fg-hkQ"/>
                             <constraint firstItem="aNi-eH-fSo" firstAttribute="leading" secondItem="gpQ-Xq-t54" secondAttribute="leading" constant="50" id="9O1-wN-3zC"/>
-                            <constraint firstItem="gAe-SL-Mh7" firstAttribute="top" secondItem="cLP-SG-rsH" secondAttribute="bottom" constant="71" id="BiB-Jg-5Ux"/>
+                            <constraint firstItem="gAe-SL-Mh7" firstAttribute="top" secondItem="cLP-SG-rsH" secondAttribute="bottom" constant="50" id="BiB-Jg-5Ux"/>
                             <constraint firstItem="4bB-NL-tGD" firstAttribute="leading" secondItem="gpQ-Xq-t54" secondAttribute="leading" constant="50" id="EMH-6H-eHS"/>
                             <constraint firstItem="gpQ-Xq-t54" firstAttribute="trailing" secondItem="4bB-NL-tGD" secondAttribute="trailing" constant="50" id="IIm-3p-DVv"/>
-                            <constraint firstItem="cLP-SG-rsH" firstAttribute="leading" secondItem="gpQ-Xq-t54" secondAttribute="leading" constant="114" id="Iav-R0-iNY"/>
-                            <constraint firstItem="aNi-eH-fSo" firstAttribute="top" secondItem="gAe-SL-Mh7" secondAttribute="bottom" constant="108" id="Jpm-D3-xYZ"/>
+                            <constraint firstItem="cLP-SG-rsH" firstAttribute="leading" relation="lessThanOrEqual" secondItem="gpQ-Xq-t54" secondAttribute="leading" constant="114" id="Iav-R0-iNY"/>
+                            <constraint firstItem="aNi-eH-fSo" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gAe-SL-Mh7" secondAttribute="bottom" constant="50" id="Jpm-D3-xYZ"/>
                             <constraint firstItem="cLP-SG-rsH" firstAttribute="top" secondItem="gpQ-Xq-t54" secondAttribute="top" constant="40" id="QAX-Nu-UNg"/>
-                            <constraint firstItem="gAe-SL-Mh7" firstAttribute="leading" secondItem="gpQ-Xq-t54" secondAttribute="leading" constant="49" id="dZg-JS-hT0"/>
+                            <constraint firstItem="gpQ-Xq-t54" firstAttribute="bottom" secondItem="4bB-NL-tGD" secondAttribute="bottom" constant="50" id="b2p-sq-AAk"/>
+                            <constraint firstItem="gAe-SL-Mh7" firstAttribute="leading" secondItem="gpQ-Xq-t54" secondAttribute="leading" constant="20" id="dZg-JS-hT0"/>
                             <constraint firstItem="gpQ-Xq-t54" firstAttribute="trailing" secondItem="aNi-eH-fSo" secondAttribute="trailing" constant="50" id="eig-fd-WwP"/>
-                            <constraint firstItem="gpQ-Xq-t54" firstAttribute="trailing" secondItem="cLP-SG-rsH" secondAttribute="trailing" constant="114" id="epn-Nc-sxh"/>
-                            <constraint firstItem="gpQ-Xq-t54" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4bB-NL-tGD" secondAttribute="bottom" constant="113" id="jW3-5g-7kY"/>
+                            <constraint firstItem="gpQ-Xq-t54" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="cLP-SG-rsH" secondAttribute="trailing" constant="114" id="epn-Nc-sxh"/>
                             <constraint firstItem="4bB-NL-tGD" firstAttribute="top" secondItem="aNi-eH-fSo" secondAttribute="bottom" constant="29" id="mx4-jp-8mk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gpQ-Xq-t54"/>
@@ -95,4 +98,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logoIconNew" width="457" height="640"/>
+    </resources>
 </document>

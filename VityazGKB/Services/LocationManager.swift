@@ -30,15 +30,12 @@ class LocationManager: NSObject {
     func startUpdateLocation() {
        locationManager.startUpdatingLocation()
     }
-    
 }
 
 extension LocationManager : CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         delegate?.locationManager(self, coordination: locations[0].coordinate)
         guard let location = locations.last else { return }
-        geoCoder.reverseGeocodeLocation(location) { mark, error in
-            
-        }
+        geoCoder.reverseGeocodeLocation(location) { mark, error in }
     }
 }

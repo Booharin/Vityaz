@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RDC-3B-vTc">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="код клиента" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RDC-3B-vTc">
                                 <rect key="frame" x="60" y="210" width="255" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="UY1-Ss-F5P"/>
@@ -37,8 +37,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ub-kQ-pdv">
-                                <rect key="frame" x="100" y="331" width="175" height="30"/>
-                                <color key="backgroundColor" red="0.32769864797592163" green="0.45350247621536255" blue="0.69832915067672729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="70" y="331" width="235" height="30"/>
+                                <color key="backgroundColor" red="0.25882352941176467" green="0.27843137254901962" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VnM-u0-ujq"/>
                                 </constraints>
@@ -61,24 +61,49 @@
                                     <action selector="backToMain:" destination="ISb-WL-Hd8" eventType="touchUpInside" id="m31-pj-xYu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vb-r0-o2x">
+                                <rect key="frame" x="70" y="389" width="235" height="30"/>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.2784313725" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uqj-Og-ppa"/>
+                                </constraints>
+                                <state key="normal" title="Восстановить пароль">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="toMap:" destination="ISb-WL-Hd8" eventType="touchUpInside" id="HrE-ly-9Ui"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="5vb-r0-o2x" firstAttribute="top" secondItem="9Ub-kQ-pdv" secondAttribute="bottom" constant="28" id="5ah-bf-FLp"/>
                             <constraint firstItem="RDC-3B-vTc" firstAttribute="leading" secondItem="QNP-VW-sWj" secondAttribute="leading" constant="60" id="7hK-bf-whw"/>
                             <constraint firstItem="QNP-VW-sWj" firstAttribute="trailing" secondItem="8cJ-rx-kSx" secondAttribute="trailing" constant="60" id="FLr-c7-dW9"/>
                             <constraint firstItem="QNP-VW-sWj" firstAttribute="trailing" secondItem="RDC-3B-vTc" secondAttribute="trailing" constant="60" id="FsD-Ze-t5W"/>
+                            <constraint firstItem="5vb-r0-o2x" firstAttribute="leading" secondItem="QNP-VW-sWj" secondAttribute="leading" constant="70" id="Ieg-48-rvq"/>
                             <constraint firstItem="9Ub-kQ-pdv" firstAttribute="top" secondItem="8cJ-rx-kSx" secondAttribute="bottom" constant="28" id="JHG-HH-jW1"/>
                             <constraint firstItem="RDC-3B-vTc" firstAttribute="top" secondItem="QNP-VW-sWj" secondAttribute="top" priority="900" constant="190" id="Mrx-Ge-atN"/>
+                            <constraint firstItem="QNP-VW-sWj" firstAttribute="trailing" secondItem="5vb-r0-o2x" secondAttribute="trailing" constant="70" id="SIb-td-LbW"/>
                             <constraint firstItem="8cJ-rx-kSx" firstAttribute="top" secondItem="RDC-3B-vTc" secondAttribute="bottom" constant="33" id="Sqg-0J-kzN"/>
                             <constraint firstItem="8cJ-rx-kSx" firstAttribute="leading" secondItem="QNP-VW-sWj" secondAttribute="leading" constant="60" id="YsL-wI-v1P"/>
-                            <constraint firstItem="QNP-VW-sWj" firstAttribute="bottom" secondItem="9Ub-kQ-pdv" secondAttribute="bottom" priority="900" constant="306" id="aUa-sO-DxQ"/>
                             <constraint firstItem="0Ws-Yy-Nhd" firstAttribute="leading" secondItem="QNP-VW-sWj" secondAttribute="leading" constant="16" id="emL-mX-qWN"/>
                             <constraint firstItem="0Ws-Yy-Nhd" firstAttribute="top" secondItem="QNP-VW-sWj" secondAttribute="top" constant="16" id="kmp-ga-OdF"/>
-                            <constraint firstItem="QNP-VW-sWj" firstAttribute="trailing" secondItem="9Ub-kQ-pdv" secondAttribute="trailing" constant="100" id="lHk-PT-dih"/>
-                            <constraint firstItem="9Ub-kQ-pdv" firstAttribute="leading" secondItem="QNP-VW-sWj" secondAttribute="leading" constant="100" id="qEs-h2-ngW"/>
+                            <constraint firstItem="QNP-VW-sWj" firstAttribute="trailing" secondItem="9Ub-kQ-pdv" secondAttribute="trailing" constant="70" id="lHk-PT-dih"/>
+                            <constraint firstItem="9Ub-kQ-pdv" firstAttribute="leading" secondItem="QNP-VW-sWj" secondAttribute="leading" constant="70" id="qEs-h2-ngW"/>
+                            <constraint firstItem="QNP-VW-sWj" firstAttribute="bottom" secondItem="5vb-r0-o2x" secondAttribute="bottom" priority="900" constant="248" id="sNA-ZR-jeJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QNP-VW-sWj"/>
                     </view>
+                    <connections>
+                        <outlet property="kodOfClientView" destination="RDC-3B-vTc" id="lSW-pm-Nfs"/>
+                        <outlet property="passwordView" destination="8cJ-rx-kSx" id="tLI-sO-Nor"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="InS-hU-wXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
