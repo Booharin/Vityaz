@@ -36,20 +36,36 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNi-eH-fSo">
                                 <rect key="frame" x="50" y="465" width="275" height="30"/>
+                                <color key="backgroundColor" red="0.32769864797592163" green="0.45350247621536255" blue="0.69832915067672729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="54E-nY-jSi"/>
                                 </constraints>
-                                <state key="normal" title="Стать клиентом"/>
+                                <state key="normal" title="Стать клиентом">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="becomeClient:" destination="7BD-aE-TKK" eventType="touchUpInside" id="iOx-ss-NNi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bB-NL-tGD">
                                 <rect key="frame" x="50" y="524" width="275" height="30"/>
+                                <color key="backgroundColor" red="0.32769864797592163" green="0.45350247621536255" blue="0.69832915067672729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="PCc-bh-0Iq"/>
                                 </constraints>
-                                <state key="normal" title="Вход для клиентов"/>
+                                <state key="normal" title="Вход для клиентов">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="enter:" destination="7BD-aE-TKK" eventType="touchUpInside" id="T4b-9T-zln"/>
                                 </connections>
