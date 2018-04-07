@@ -1,0 +1,6 @@
+framework module Pods_VityazGKB {
+  umbrella header "Pods-VityazGKB-umbrella.h"
+
+  export *
+  module * { export * }
+}

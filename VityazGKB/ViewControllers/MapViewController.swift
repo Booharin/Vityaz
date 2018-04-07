@@ -21,7 +21,8 @@ class MapViewController: UIViewController {
     var clientData = [String: String]()
     
     let annotation = MKPointAnnotation()
-    var coordinationOfAnnotation = CLLocationCoordinate2D()
+    var coordinationOfAnnotation: CLLocationCoordinate2D?
+    var coordinationOfClient: CLLocationCoordinate2D?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,7 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func getHelp(_ sender: Any) {
-        
+        sendCoordinates()
     }
     
     @IBAction func backToAuth(_ sender: Any) {
@@ -44,9 +45,14 @@ class MapViewController: UIViewController {
                 let clientFamily = self.clientData["family"],
                 let date = self.clientData["subscribe_finish"] {
                 
-                let message = "Код Клиента: " + kod + "\n" + "Клиент: " + clientName + " " + clientFamily + "\n" + "Действие услуги до: " + date
-                let alert = UIAlertController(title: "UserInfo", message: message, preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                let message = "Код Клиента: " + kod + "\n" + "Клиент: " + clientName +
+                    " " + clientFamily + "\n" + "Действие услуги до: " + date
+                let alert = UIAlertController(title: "UserInfo",
+                                              message: message,
+                                              preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok",
+                                              style: UIAlertActionStyle.default,
+                                              handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }
         }
@@ -61,18 +67,19 @@ class MapViewController: UIViewController {
 
 extension MapViewController: LocationManagerDelegate, UIGestureRecognizerDelegate {
     
-    func locationManager(_ locationManager: LocationManager, coordination: CLLocationCoordinate2D) {
+    func locationManager(_ locationManager: LocationManager,
+                         coordination: CLLocationCoordinate2D) {
         let currentRadius: CLLocationDistance = 1000
-        let currentRegion = MKCoordinateRegionMakeWithDistance(coordination, currentRadius * 2.0, currentRadius * 2.0)
+        let currentRegion = MKCoordinateRegionMakeWithDistance(coordination,
+                                                               currentRadius * 2.0,
+                                                               currentRadius * 2.0)
         mapView.setRegion(currentRegion, animated: true)
         mapView.showsUserLocation = true
         mapView.isZoomEnabled = true
-
-        annotation.coordinate = coordinationOfAnnotation
-        annotation.title = "Я здесь!"
-        
+        coordinationOfClient = coordination
         mapView.addAnnotation(annotation)
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(handleTap))
+        let gestureRecognizer = UITapGestureRecognizer(target: self,
+                                                       action:#selector(handleTap))
         gestureRecognizer.delegate = self
         mapView.addGestureRecognizer(gestureRecognizer)
     }
@@ -81,8 +88,66 @@ extension MapViewController: LocationManagerDelegate, UIGestureRecognizerDelegat
         mapView.removeAnnotation(annotation)
         let location = gestureReconizer.location(in: mapView)
         coordinationOfAnnotation = mapView.convert(location,toCoordinateFrom: mapView)
+        if let coordination = coordinationOfAnnotation {
+            annotation.coordinate = coordination
+        }
         sleep(1)
         mapView.addAnnotation(annotation)
     }
-    
 }
+
+extension MapViewController {
+    func sendCoordinates() {
+        
+        if let baseURL = URL(string: "http://airwan.ru/api.php"),
+            let token = clientData["token"] {
+            var request = URLRequest(url: baseURL)
+            request.setValue("application/x-www-form-urlencoded",
+                             forHTTPHeaderField: "Content-Type")
+            request.httpMethod = "POST"
+            if let coordination = coordinationOfAnnotation {
+                let gps_x = coordination.longitude.description
+                let gps_y = coordination.latitude.description
+                let postString = "method=warning&token=" + token +
+                    "&gps_x=" + gps_x + "&gps_y=" + gps_y
+                request.httpBody = postString.data(using: .utf8)
+                let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                    guard let _ = data, error == nil else {                                                 // check for fundamental networking error
+                        print("error=\(String(describing: error))")
+                        return
+                    }
+                    self.sendAlert()
+                }
+                task.resume()
+            } else if let coordination = coordinationOfClient {
+                let gps_x = coordination.longitude.description
+                let gps_y = coordination.latitude.description
+                let postString = "method=warning&token=" + token +
+                    "&gps_x=" + gps_x + "&gps_y=" + gps_y
+                request.httpBody = postString.data(using: .utf8)
+                let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                    guard let _ = data, error == nil else {                                                 // check for fundamental networking error
+                        print("error=\(String(describing: error))")
+                        return
+                    }
+                    self.sendAlert()
+                }
+                task.resume()
+            }
+        }
+    }
+    
+    func sendAlert() {
+        DispatchQueue.main.async {
+            let message = "Координаты успешно отправлены"
+            let alert = UIAlertController(title: nil,
+                                          message: message,
+                                          preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok",
+                                          style: UIAlertActionStyle.default,
+                                          handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+}
+

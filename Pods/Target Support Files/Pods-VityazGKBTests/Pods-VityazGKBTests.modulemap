@@ -1,0 +1,6 @@
+framework module Pods_VityazGKBTests {
+  umbrella header "Pods-VityazGKBTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
