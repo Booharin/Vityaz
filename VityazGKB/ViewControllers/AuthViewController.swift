@@ -25,7 +25,7 @@ final class AuthViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    func checkClientPassword() {
+    private func checkClientPassword() {
         
         if let baseURL = URL(string: "http://airwan.ru/api.php"),
             let id = kodOfClientView.text,
@@ -79,7 +79,7 @@ final class AuthViewController: UIViewController {
         }
     }
     
-    func presentMapViewController(_ dict: [String: String]) {
+    private func presentMapViewController(_ dict: [String: String]) {
         if let vc = UIStoryboard(name: "Map",
                                  bundle: nil)
             .instantiateViewController(withIdentifier: "MapViewController") as? MapViewController

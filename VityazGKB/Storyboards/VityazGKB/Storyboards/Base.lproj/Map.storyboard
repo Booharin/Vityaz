@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KuE-BS-gzM">
-                                <rect key="frame" x="0.0" y="20" width="375" height="419"/>
+                                <rect key="frame" x="0.0" y="20.5" width="375" height="418.5"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ei2-FR-jhs">
                                 <rect key="frame" x="0.0" y="439" width="375" height="228"/>
@@ -111,12 +111,13 @@
                             <constraint firstItem="xI3-6z-Pl2" firstAttribute="leading" secondItem="M4L-ZF-eV5" secondAttribute="leading" constant="16" id="Mrl-UT-V2c"/>
                             <constraint firstItem="Ei2-FR-jhs" firstAttribute="trailing" secondItem="M4L-ZF-eV5" secondAttribute="trailing" id="Nyb-ga-ubL"/>
                             <constraint firstItem="Ei2-FR-jhs" firstAttribute="top" secondItem="KuE-BS-gzM" secondAttribute="bottom" id="WER-vS-rnT"/>
-                            <constraint firstItem="KuE-BS-gzM" firstAttribute="top" secondItem="M4L-ZF-eV5" secondAttribute="top" id="t1H-5p-sVY"/>
                             <constraint firstItem="Ei2-FR-jhs" firstAttribute="leading" secondItem="M4L-ZF-eV5" secondAttribute="leading" id="uGK-A6-cJZ"/>
+                            <constraint firstItem="KuE-BS-gzM" firstAttribute="top" secondItem="M4L-ZF-eV5" secondAttribute="top" id="wcR-KT-Ebn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M4L-ZF-eV5"/>
                     </view>
                     <connections>
+                        <outlet property="backGroundView" destination="Ei2-FR-jhs" id="Uap-wN-8R2"/>
                         <outlet property="getHelpButton" destination="zpL-FK-k3V" id="fZH-sE-kYe"/>
                         <outlet property="mapView" destination="KuE-BS-gzM" id="wZT-a0-fWw"/>
                         <outlet property="questionButton" destination="kJ6-cI-0l9" id="qnG-dT-p62"/>

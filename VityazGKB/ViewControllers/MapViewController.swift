@@ -9,26 +9,28 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+final class MapViewController: UIViewController {
 
     @IBOutlet weak var getHelpButton: UIButton!
     @IBOutlet weak var questionButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var backGroundView: UIView!
     
     private let getHelpButtonWidth: CGFloat = 148
     private let questionButtonWidth: CGFloat = 46
     
     var clientData = [String: String]()
     
-    let annotation = MKPointAnnotation()
-    var coordinationOfAnnotation: CLLocationCoordinate2D?
-    var coordinationOfClient: CLLocationCoordinate2D?
+    private let annotation = MKPointAnnotation()
+    private var coordinationOfAnnotation: CLLocationCoordinate2D?
+    private var coordinationOfClient: CLLocationCoordinate2D?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         LocationManager.instance.delegate = self
         LocationManager.instance.startUpdateLocation()
         setHelpButton()
+        backGroundView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "blueHaci"))
     }
     
     @IBAction func getHelp(_ sender: Any) {
@@ -38,6 +40,7 @@ class MapViewController: UIViewController {
     @IBAction func backToAuth(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func infoButton(_ sender: Any) {
         DispatchQueue.main.async {
             if let kod = self.clientData["kod"],
@@ -58,7 +61,7 @@ class MapViewController: UIViewController {
         }
     }
     
-    func setHelpButton() {
+    private func setHelpButton() {
         getHelpButton.layer.borderColor = #colorLiteral(red: 0.2431372549, green: 0.2666666667, blue: 0.5960784314, alpha: 1)
         getHelpButton.layer.borderWidth = 4.0
         getHelpButton.titleLabel?.textAlignment = .center
@@ -97,7 +100,7 @@ extension MapViewController: LocationManagerDelegate, UIGestureRecognizerDelegat
 }
 
 extension MapViewController {
-    func sendCoordinates() {
+    private func sendCoordinates() {
         
         if let baseURL = URL(string: "http://airwan.ru/api.php"),
             let token = clientData["token"] {
@@ -137,7 +140,7 @@ extension MapViewController {
         }
     }
     
-    func sendAlert() {
+    private func sendAlert() {
         DispatchQueue.main.async {
             let message = "Координаты успешно отправлены"
             let alert = UIAlertController(title: nil,
