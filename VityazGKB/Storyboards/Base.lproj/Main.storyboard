@@ -25,12 +25,12 @@
                                     <constraint firstAttribute="width" secondItem="cLP-SG-rsH" secondAttribute="height" multiplier="50:71" id="Qbl-tA-87S"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать в приложение ГКБ Витязь" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAe-SL-Mh7">
-                                <rect key="frame" x="20" y="397" width="335" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать на территорию безопасности ГКБ Витязь" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAe-SL-Mh7">
+                                <rect key="frame" x="0.0" y="397" width="375" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="Ygc-zn-YQN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -41,8 +41,10 @@
                                     <constraint firstAttribute="height" constant="50" id="54E-nY-jSi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <size key="titleShadowOffset" width="-1" height="-1"/>
                                 <state key="normal" title="Стать клиентом">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="0.076831836129999997" green="0.14266005440000001" blue="0.21791942889999999" alpha="0.41842358730000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -60,8 +62,10 @@
                                     <constraint firstAttribute="height" constant="50" id="PCc-bh-0Iq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <size key="titleShadowOffset" width="-1" height="-1"/>
                                 <state key="normal" title="Вход для клиентов">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="0.076831836129999997" green="0.14266005440000001" blue="0.21791942889999999" alpha="0.41842358730000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -76,7 +80,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cLP-SG-rsH" firstAttribute="centerX" secondItem="U7X-5u-eFT" secondAttribute="centerX" id="6dz-o6-8dZ"/>
-                            <constraint firstItem="gpQ-Xq-t54" firstAttribute="trailing" secondItem="gAe-SL-Mh7" secondAttribute="trailing" constant="20" id="7o9-fg-hkQ"/>
+                            <constraint firstItem="gpQ-Xq-t54" firstAttribute="trailing" secondItem="gAe-SL-Mh7" secondAttribute="trailing" id="7o9-fg-hkQ"/>
                             <constraint firstItem="aNi-eH-fSo" firstAttribute="leading" secondItem="gpQ-Xq-t54" secondAttribute="leading" constant="50" id="9O1-wN-3zC"/>
                             <constraint firstItem="gAe-SL-Mh7" firstAttribute="top" secondItem="cLP-SG-rsH" secondAttribute="bottom" constant="50" id="BiB-Jg-5Ux"/>
                             <constraint firstItem="4bB-NL-tGD" firstAttribute="leading" secondItem="gpQ-Xq-t54" secondAttribute="leading" constant="50" id="EMH-6H-eHS"/>
@@ -85,13 +89,17 @@
                             <constraint firstItem="aNi-eH-fSo" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gAe-SL-Mh7" secondAttribute="bottom" constant="50" id="Jpm-D3-xYZ"/>
                             <constraint firstItem="cLP-SG-rsH" firstAttribute="top" secondItem="gpQ-Xq-t54" secondAttribute="top" constant="40" id="QAX-Nu-UNg"/>
                             <constraint firstItem="gpQ-Xq-t54" firstAttribute="bottom" secondItem="4bB-NL-tGD" secondAttribute="bottom" constant="50" id="b2p-sq-AAk"/>
-                            <constraint firstItem="gAe-SL-Mh7" firstAttribute="leading" secondItem="gpQ-Xq-t54" secondAttribute="leading" constant="20" id="dZg-JS-hT0"/>
+                            <constraint firstItem="gAe-SL-Mh7" firstAttribute="leading" secondItem="gpQ-Xq-t54" secondAttribute="leading" id="dZg-JS-hT0"/>
                             <constraint firstItem="gpQ-Xq-t54" firstAttribute="trailing" secondItem="aNi-eH-fSo" secondAttribute="trailing" constant="50" id="eig-fd-WwP"/>
                             <constraint firstItem="gpQ-Xq-t54" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="cLP-SG-rsH" secondAttribute="trailing" constant="114" id="epn-Nc-sxh"/>
                             <constraint firstItem="4bB-NL-tGD" firstAttribute="top" secondItem="aNi-eH-fSo" secondAttribute="bottom" constant="29" id="mx4-jp-8mk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gpQ-Xq-t54"/>
                     </view>
+                    <connections>
+                        <outlet property="becomeClientButton" destination="aNi-eH-fSo" id="xfU-ZR-r7a"/>
+                        <outlet property="enterForClientView" destination="4bB-NL-tGD" id="gdY-tZ-skw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wPb-8u-45W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

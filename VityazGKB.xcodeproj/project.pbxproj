@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F260246207A8EE10034DEB6 /* ShadowSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F260245207A8EE10034DEB6 /* ShadowSettings.swift */; };
 		1F4FA230AE8B53C7F1A4D6D7 /* Pods_VityazGKB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CFD7EA7C33A4171BEA1179 /* Pods_VityazGKB.framework */; };
 		1F6C471D20775FC30078DD0E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C471C20775FC30078DD0E /* LocationManager.swift */; };
 		1F748FA720793C8100126EFA /* pochucs.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F748FA620793C8100126EFA /* pochucs.ttf */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		047AB1DFD4BA4083A491D51C /* Pods-VityazGKB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VityazGKB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VityazGKB/Pods-VityazGKB.debug.xcconfig"; sourceTree = "<group>"; };
+		1F260245207A8EE10034DEB6 /* ShadowSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowSettings.swift; sourceTree = "<group>"; };
 		1F6C471C20775FC30078DD0E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		1F748FA620793C8100126EFA /* pochucs.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pochucs.ttf; sourceTree = "<group>"; };
 		1FD9C4D72076B3B100FFDF54 /* VityazGKB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VityazGKB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				1F6C471C20775FC30078DD0E /* LocationManager.swift */,
+				1F260245207A8EE10034DEB6 /* ShadowSettings.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				1F6C471D20775FC30078DD0E /* LocationManager.swift in Sources */,
 				1FD9C50F2076B51F00FFDF54 /* WebViewController.swift in Sources */,
 				1FD9C51E2076B9D600FFDF54 /* MapViewController.swift in Sources */,
+				1F260246207A8EE10034DEB6 /* ShadowSettings.swift in Sources */,
 				1FD9C4DB2076B3B100FFDF54 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
