@@ -30,7 +30,6 @@ final class MapViewController: UIViewController {
         LocationManager.instance.delegate = self
         LocationManager.instance.startUpdateLocation()
         setHelpButton()
-        backGroundView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "blueHaci"))
     }
     
     @IBAction func getHelp(_ sender: Any) {
@@ -65,6 +64,14 @@ final class MapViewController: UIViewController {
         getHelpButton.layer.borderColor = #colorLiteral(red: 0.2431372549, green: 0.2666666667, blue: 0.5960784314, alpha: 1)
         getHelpButton.layer.borderWidth = 4.0
         getHelpButton.titleLabel?.textAlignment = .center
+        let imageView = UIImageView(frame: CGRect(x: 0,
+                                                  y: 0,
+                                                  width: backGroundView.frame.width,
+                                                  height: backGroundView.frame.height))
+        imageView.image = #imageLiteral(resourceName: "blueHaci")
+        imageView.contentMode = .scaleAspectFill
+        backGroundView.addSubview(imageView)
+        backGroundView.sendSubview(toBack: imageView)
     }
 }
 
