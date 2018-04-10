@@ -24,6 +24,10 @@ final class MapViewController: UIViewController {
     private let annotation = MKPointAnnotation()
     private var coordinationOfAnnotation: CLLocationCoordinate2D?
     private var coordinationOfClient: CLLocationCoordinate2D?
+    private var startTime: Date?
+    private var lastLocation: CLLocation?
+    private var firstLocation: CLLocation?
+    private var isCoordinatesSent = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,6 +98,13 @@ extension MapViewController: LocationManagerDelegate, UIGestureRecognizerDelegat
         mapView.addGestureRecognizer(gestureRecognizer)
     }
     
+    func getLocation(_ location: CLLocation) {
+        lastLocation = location
+        if isCoordinatesSent == true {
+            checkCoordinates()
+        }
+    }
+    
     @objc func handleTap(gestureReconizer: UILongPressGestureRecognizer) {
         mapView.removeAnnotation(annotation)
         let location = gestureReconizer.location(in: mapView)
@@ -127,6 +138,7 @@ extension MapViewController {
                         return
                     }
                     self.sendAlert()
+                    self.isCoordinatesSent = true
                 }
                 task.resume()
             } else if let coordination = coordinationOfClient {
@@ -141,9 +153,52 @@ extension MapViewController {
                         return
                     }
                     self.sendAlert()
+                    self.isCoordinatesSent = true
                 }
                 task.resume()
             }
+        }
+    }
+    
+    private func checkCoordinates() {
+        guard let loc = lastLocation else { return }
+        
+        let time = loc.timestamp
+        
+        guard let startTime = startTime else {
+            self.startTime = time
+            return
+        }
+        
+        let elapsed = time.timeIntervalSince(startTime)
+        
+        if elapsed > 15 {
+            if loc.coordinate.latitude != firstLocation?.coordinate.latitude ||
+                loc.coordinate.longitude != firstLocation?.coordinate.longitude {
+                print("Upload updated location to server")
+                if let baseURL = URL(string: "http://airwan.ru/api.php"),
+                    let token = clientData["token"] {
+                    var request = URLRequest(url: baseURL)
+                    request.setValue("application/x-www-form-urlencoded",
+                                     forHTTPHeaderField: "Content-Type")
+                    request.httpMethod = "POST"
+                    let gps_x = loc.coordinate.longitude.description
+                    let gps_y = loc.coordinate.latitude.description
+                    let postString = "method=warning&token=" + token +
+                        "&gps_x=" + gps_x + "&gps_y=" + gps_y
+                    request.httpBody = postString.data(using: .utf8)
+                    let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                        guard let _ = data, error == nil else {                                                 // check for fundamental networking error
+                            print("error=\(String(describing: error))")
+                            return
+                        }
+                        self.isCoordinatesSent = true
+                    }
+                    task.resume()
+                }
+            }
+            self.startTime = time
+            self.firstLocation = loc
         }
     }
     
