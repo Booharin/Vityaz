@@ -31,6 +31,7 @@ final class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkAuthorization()
         LocationManager.instance.delegate = self
         LocationManager.instance.startUpdateLocation()
         setHelpButton()
@@ -76,6 +77,40 @@ final class MapViewController: UIViewController {
         imageView.contentMode = .scaleAspectFill
         backGroundView.addSubview(imageView)
         backGroundView.sendSubview(toBack: imageView)
+    }
+    
+    func checkAuthorization() {
+        if CLLocationManager.locationServicesEnabled() {
+            switch CLLocationManager.authorizationStatus() {
+            case .notDetermined, .restricted, .denied:
+                print("No access")
+                DispatchQueue.main.async {
+                    let message = "Для работы тревожной кнопки требуется разрешить доступ к определению геолокации в настройках приложения"
+                    let alert = UIAlertController(title: nil,
+                                                  message: message,
+                                                  preferredStyle: UIAlertControllerStyle.alert)
+                    let settingsAction = UIAlertAction(title: "Настройки", style: .default) { (_) -> Void in
+                        guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
+                            return
+                        }
+                        if UIApplication.shared.canOpenURL(settingsUrl) {
+                            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                                print("Settings opened: \(success)") // Prints true
+                            })
+                        }
+                    }
+                    alert.addAction(settingsAction)
+                    alert.addAction(UIAlertAction(title: "Ok",
+                                                  style: UIAlertActionStyle.default,
+                                                  handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            case .authorizedAlways, .authorizedWhenInUse:
+                print("Access")
+            }
+        } else {
+            print("Location services are not enabled")
+        }
     }
 }
 
@@ -130,7 +165,7 @@ extension MapViewController {
                 let gps_x = coordination.longitude.description
                 let gps_y = coordination.latitude.description
                 let postString = "method=warning&token=" + token +
-                    "&gps_x=" + gps_x + "&gps_y=" + gps_y
+                    "&gps_x=" + gps_x + "&gps_y=" + gps_y + "&is_metka=true"
                 request.httpBody = postString.data(using: .utf8)
                 let task = URLSession.shared.dataTask(with: request) { data, response, error in
                     guard let _ = data, error == nil else {                                                 // check for fundamental networking error
@@ -145,7 +180,7 @@ extension MapViewController {
                 let gps_x = coordination.longitude.description
                 let gps_y = coordination.latitude.description
                 let postString = "method=warning&token=" + token +
-                    "&gps_x=" + gps_x + "&gps_y=" + gps_y
+                    "&gps_x=" + gps_x + "&gps_y=" + gps_y + "&is_metka=false"
                 request.httpBody = postString.data(using: .utf8)
                 let task = URLSession.shared.dataTask(with: request) { data, response, error in
                     guard let _ = data, error == nil else {                                                 // check for fundamental networking error
@@ -185,7 +220,7 @@ extension MapViewController {
                     let gps_x = loc.coordinate.longitude.description
                     let gps_y = loc.coordinate.latitude.description
                     let postString = "method=warning&token=" + token +
-                        "&gps_x=" + gps_x + "&gps_y=" + gps_y
+                        "&gps_x=" + gps_x + "&gps_y=" + gps_y + "&is_metka=false"
                     request.httpBody = postString.data(using: .utf8)
                     let task = URLSession.shared.dataTask(with: request) { data, response, error in
                         guard let _ = data, error == nil else {                                                 // check for fundamental networking error

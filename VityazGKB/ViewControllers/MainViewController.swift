@@ -19,11 +19,9 @@ final class MainViewController: UIViewController {
     }
 
     @IBAction func becomeClient(_ sender: Any) {
-        if let vc = UIStoryboard(name: "WebView",
-                                 bundle: nil)
-            .instantiateViewController(withIdentifier: "WebViewController") as? WebViewController
-        {
-            present(vc, animated: true, completion: nil)
+        let urlString = "http://hotline.gkb-vityaz.ru/"
+        if let url = URL(string: urlString) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
     
